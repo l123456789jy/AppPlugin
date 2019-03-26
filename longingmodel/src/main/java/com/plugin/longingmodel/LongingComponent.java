@@ -15,11 +15,11 @@ import com.billy.cc.core.component.IComponent;
  * 修改备注：
  * 联系方式：906514731@qq.com
  */
-public class ComponentA implements IComponent {
+public class LongingComponent implements IComponent {
   @Override
   public String getName() {
     //指定组件的名称
-    return "ComponentA";
+    return "LongingComponent";
   }
 
   @Override
@@ -30,8 +30,9 @@ public class ComponentA implements IComponent {
       case "showActivity":
         //跳转到页面：ActivityA
         CCUtil.navigateTo(cc, LongingActivity.class);
+
         //返回处理结果给调用方
-        CC.sendCCResult(cc.getCallId(), CCResult.success());
+        CC.sendCCResult(cc.getCallId(),   CCResult.success("key","我是登录组件的信息"));
         //同步方式实现（在return之前听过CC.sendCCResult()返回组件调用结果），return false
         return false;
       default:

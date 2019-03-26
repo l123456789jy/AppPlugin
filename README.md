@@ -6,3 +6,5 @@ app插件化demo
 - common  模拟公共库
 
 - longingmodel  模拟登录界面他是一个单独的抽离组件
+
+-  LogInterceptor  放在了common公共库中，全局响应拦截

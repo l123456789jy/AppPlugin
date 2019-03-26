@@ -23,7 +23,7 @@ android {
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+  api 'com.billy.android:cc:2.1.4'//公共库来依赖cc
   implementation 'com.android.support:appcompat-v7:28.0.0'
   implementation 'com.android.support.constraint:constraint-layout:1.1.3'
   testImplementation 'junit:junit:4.12'

@@ -1,4 +1,5 @@
 project.apply plugin: 'cc-register'
 def dependencyMode = GradleVersion.version(project.gradle.gradleVersion) >= GradleVersion.version('4.1') ? 'api' : 'compile'
-project.dependencies.add(dependencyMode, "com.billy.android:cc:2.1.4") //用最新版
-project.dependencies.add(dependencyMode, project(":common"))//依赖公共的组件
+project.dependencies.add(dependencyMode, project(":common"))//依赖公共的组件，这里是所有项目都会依赖
+
+
