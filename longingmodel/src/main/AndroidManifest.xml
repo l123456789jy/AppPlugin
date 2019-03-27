@@ -3,5 +3,6 @@
 
   <application>
     <activity android:name=".LongingActivity"/>
+    <activity android:name=".UserActivity"/>
   </application>
 </manifest>

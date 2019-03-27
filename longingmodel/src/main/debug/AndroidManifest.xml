@@ -4,9 +4,10 @@
 
   <application
       android:name="debug.LongingApplication"
-      android:label="@string/app_name"
-      >
-    <activity android:name="com.plugin.longingmodel.LongingActivity">
+      android:label="@string/app_name">
+    <activity android:name=".UserActivity">
+    </activity>
+    <activity android:name=".LongingActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 

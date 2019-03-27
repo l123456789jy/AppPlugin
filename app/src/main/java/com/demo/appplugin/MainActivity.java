@@ -7,6 +7,7 @@ import com.billy.cc.core.component.CC;
 import com.billy.cc.core.component.CCResult;
 import com.billy.cc.core.component.IComponentCallback;
 import com.plugin.common.BaseActivity;
+import com.plugin.common.manger.UserStateManager;
 import com.plugin.common.utiles.ToastUtils;
 
 /**
@@ -29,7 +30,9 @@ public class MainActivity extends BaseActivity {
             .callAsyncCallbackOnMainThread(new IComponentCallback() {
               @Override
               public void onResult(CC cc, CCResult result) {
-                ToastUtils.showToast("我收到结果"+result.getDataItem("key"),MainActivity.this);
+                if (result.isSuccess()){
+                  ToastUtils.showToast("我收到结果"+result.getDataItem(UserStateManager.KEY_USER).toString(),MainActivity.this);
+                }
               }
             });
       }
