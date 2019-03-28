@@ -2,20 +2,20 @@ apply from: rootProject.file('cc-settings-2.gradle')
 
 android {
   compileSdkVersion 28
+
   //防止资源冲突
-  resourcePrefix "L_"
+  resourcePrefix "U_"
 
   defaultConfig {
     minSdkVersion 16
     targetSdkVersion 28
     versionCode 1
     versionName "1.0"
-
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     //仅在以application方式编译时才添加applicationId属性
     if (project.ext.runAsApp) {
-      applicationId 'com.plugin.longingmodel'
+      applicationId 'com.plugin.userinfomodel'
     }
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
   buildTypes {

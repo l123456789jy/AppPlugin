@@ -1,11 +1,14 @@
 package com.plugin.common.model;
 
+import java.io.Serializable;
+
 /**
- * 演示传递自定义类型
+ * 演示传递自定义类型，这里的model如果需要跨组件传输就必须要实现序列化，
+ * 或者转成json串进行传递
  * @author billy.qi
  * @since 18/5/28 19:43
  */
-public class User {
+public class User implements Serializable {
     private String userName;
     private int id;
 

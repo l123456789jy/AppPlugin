@@ -1,1 +1,1 @@
-include ':app', ':common', ':longingmodel'
+include ':app', ':common', ':longingmodel', ':userinfomodel'

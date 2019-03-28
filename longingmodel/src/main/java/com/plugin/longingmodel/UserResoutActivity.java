@@ -7,11 +7,11 @@ import android.os.Bundle;
  * 登录成功界面
  * @author
  */
-public class UserActivity extends Activity {
+public class UserResoutActivity extends Activity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_user);
+    setContentView(R.layout.activity_user_resout);
   }
 }

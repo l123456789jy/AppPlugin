@@ -42,7 +42,7 @@ public class LongingComponent implements IComponent {
         //检查是否已经登录，如果已经登录跳转到已经登录界面
         if (UserStateManager.getLoginUser() != null) {
           //跳转到已经登录界面
-          CCUtil.navigateTo(cc, UserActivity.class);
+          CCUtil.navigateTo(cc, UserResoutActivity.class);
           //返回用户信息
           CCResult result =
               CCResult.success(UserStateManager.KEY_USER, UserStateManager.getLoginUser());
