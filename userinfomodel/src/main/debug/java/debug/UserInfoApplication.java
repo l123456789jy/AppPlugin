@@ -3,6 +3,9 @@ package debug;
 import android.app.Application;
 import android.util.Log;
 import com.billy.cc.core.component.CC;
+import com.billy.cc.core.component.CCResult;
+import com.billy.cc.core.component.IComponentCallback;
+import com.plugin.common.utiles.ToastUtils;
 import com.plugin.userinfomodel.BuildConfig;
 
 /**
@@ -22,6 +25,20 @@ public class UserInfoApplication extends Application {
     CC.enableDebug(BuildConfig.DEBUG);
     CC.enableVerboseLog(BuildConfig.DEBUG);
     CC.enableRemoteCC(BuildConfig.DEBUG);
-    Log.e("LongingApplication", "onCreate:LongingApplication ");
+    initLib();
+    Log.e("LongingApplication", "onCreate:UserInfoApplication ");
+  }
+
+  /**
+   * 模拟初始化三方库
+   */
+  private void initLib() {
+    String callId = CC.obtainBuilder("LibInitComponent")
+        .build()
+        .callAsyncCallbackOnMainThread(new IComponentCallback() {
+          @Override
+          public void onResult(CC cc, CCResult result) {
+          }
+        });
   }
 }

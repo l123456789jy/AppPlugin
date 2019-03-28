@@ -18,3 +18,9 @@ app插件化demo
 
 - 进行组件之间共享传递的要实现序列化或者以json格式传递,组件之间通过AIDL进行通讯
 
+- model的Application初始化逻辑，由于debugApplication只会在单独运行的时候执行，而我们想要整合和单独运行时候都要执行，可以这样
+
+将这种组件的初始化逻辑封装成一个action：
+1.1 在主app module的Application.onCreate中调用该组件初始化action
+1.2 在组件的debug目录中创建DebugApplication，也在DebugApplication.onCreate中调用该组件初始化action
+

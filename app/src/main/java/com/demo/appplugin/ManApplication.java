@@ -3,6 +3,8 @@ package com.demo.appplugin;
 import android.app.Application;
 import android.util.Log;
 import com.billy.cc.core.component.CC;
+import com.billy.cc.core.component.CCResult;
+import com.billy.cc.core.component.IComponentCallback;
 
 /**
  * 项目名称：v4.2.0
@@ -22,5 +24,21 @@ public class ManApplication extends Application {
     CC.enableVerboseLog(BuildConfig.DEBUG);
     CC.enableRemoteCC(BuildConfig.DEBUG);
     Log.e("LongingApplication", "onCreate:LongingApplication ");
+    initLib();
   }
+
+
+  /**
+   * 模拟初始化useringomodel三方库
+   */
+  private void initLib() {
+    String callId = CC.obtainBuilder("LibInitComponent")
+        .build()
+        .callAsyncCallbackOnMainThread(new IComponentCallback() {
+          @Override
+          public void onResult(CC cc, CCResult result) {
+          }
+        });
+  }
+
 }
