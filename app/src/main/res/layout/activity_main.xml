@@ -23,7 +23,7 @@
       android:id="@+id/bt_openuser"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginRight="128dp"
+      android:layout_marginRight="@dimen/dp_128"
       android:text="点击跳转到用户信息"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintRight_toRightOf="parent"

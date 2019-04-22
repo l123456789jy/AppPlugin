@@ -24,3 +24,4 @@ app插件化demo
 1.1 在主app module的Application.onCreate中调用该组件初始化action
 1.2 在组件的debug目录中创建DebugApplication，也在DebugApplication.onCreate中调用该组件初始化action
 
+- 由于项目使用的宽高限定符的方式进行适配，不可能每个项目都要建立个dimes,因此只需要将dimes创建在common公共库依赖即可
