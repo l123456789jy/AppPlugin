@@ -25,3 +25,8 @@ app插件化demo
 1.2 在组件的debug目录中创建DebugApplication，也在DebugApplication.onCreate中调用该组件初始化action
 
 - 由于项目使用的宽高限定符的方式进行适配，不可能每个项目都要建立个dimes,因此只需要将dimes创建在common公共库依赖即可
+
+- 插件的工程，资源名字，layout名字，字符串，什么都必须独一无二，不能重复建议加上lib的组件的名字前缀即可
+
+- 插件工程的minSdkVersion要和lib工程一致
+
